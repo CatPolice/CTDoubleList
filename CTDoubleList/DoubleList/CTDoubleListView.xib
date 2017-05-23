@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTDoubleListView">
+            <connections>
+                <outlet property="_headBackgroundView" destination="T63-Wo-eUE" id="m8I-Ko-1H4"/>
+                <outlet property="_leftBackgroundView" destination="0ED-dh-FdA" id="T4b-bC-fHo"/>
+                <outlet property="_rightBackgroundView" destination="TX8-cq-lQT" id="gDr-fZ-Omf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T63-Wo-eUE">
+                    <rect key="frame" x="67" y="0.0" width="308" height="49"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.029356710899999999" blue="0.1099388397" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="Ume-JC-f6p"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ED-dh-FdA">
+                    <rect key="frame" x="0.0" y="49" width="68" height="351"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.029356710899999999" blue="0.1099388397" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="yta-O9-cjF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TX8-cq-lQT">
+                    <rect key="frame" x="68" y="49" width="307" height="351"/>
+                    <color key="backgroundColor" red="0.0" green="0.81176470590000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0ED-dh-FdA" secondAttribute="bottom" id="2y3-hE-zoA"/>
+                <constraint firstItem="0ED-dh-FdA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="54M-bS-pbw"/>
+                <constraint firstItem="TX8-cq-lQT" firstAttribute="top" secondItem="T63-Wo-eUE" secondAttribute="bottom" id="GQl-jD-crS"/>
+                <constraint firstAttribute="bottom" secondItem="TX8-cq-lQT" secondAttribute="bottom" id="IfO-z7-vKV"/>
+                <constraint firstAttribute="trailing" secondItem="TX8-cq-lQT" secondAttribute="trailing" id="Yar-bP-KeI"/>
+                <constraint firstItem="0ED-dh-FdA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="49" id="YzC-1B-2Wd"/>
+                <constraint firstAttribute="trailing" secondItem="T63-Wo-eUE" secondAttribute="trailing" id="Z4a-p8-zJz"/>
+                <constraint firstItem="T63-Wo-eUE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="67" id="cu1-SN-h4P"/>
+                <constraint firstItem="TX8-cq-lQT" firstAttribute="leading" secondItem="0ED-dh-FdA" secondAttribute="trailing" id="czG-Aa-OpC"/>
+                <constraint firstItem="T63-Wo-eUE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tWD-ko-BG7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.5" y="-160"/>
+        </view>
+    </objects>
+</document>
