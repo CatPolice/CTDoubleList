@@ -15,6 +15,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.layer.borderWidth = .5;
+    self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

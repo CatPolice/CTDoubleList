@@ -9,6 +9,8 @@
 #import "CTDoubleListView.h"
 #import "CTUITableviewDataSource.h"
 #import "CTLeftTableViewCell.h"
+#import "CTRightTableViewCell.h"
+#import "CTDoubleListConstant.h"
 
 
 @interface CTDoubleListView ()<UIScrollViewDelegate,UITableViewDelegate>
@@ -20,6 +22,8 @@
     
     UITableView *_leftTableview;
     UITableView *_rightTableview;
+    
+    UIScrollView *_mainScrollview;
 }
 
 
@@ -69,8 +73,8 @@
  *
  */
 - (void)setDataSource:(NSArray *)liftDataSource withHeadDataSource:(NSArray *)headDataSource withRightDataSource:(NSArray *)rightDataSource{
-    [self createLeftTableView:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
-    [self createRightTableView:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
+    [self createLeftTableView:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
+    [self createRightTableView:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
 }
 
 
@@ -84,9 +88,9 @@
     _leftTableview = [[UITableView alloc] initWithFrame:_leftBackgroundView.bounds style:UITableViewStylePlain];
     [_leftTableview registerNib:[CTLeftTableViewCell nib] forCellReuseIdentifier:@"LEFT_UITABLEVIEW"];
     _leftTableview.delegate = self;
-    _leftTableview.rowHeight = 45;
+    _leftTableview.rowHeight = CT_CELL_ROW_HEIGHT;
     [_leftBackgroundView addSubview:_leftTableview];
-    
+    _leftTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     CTUITableViewCellConfigureBlock configureCell = ^(UITableViewCell *cell, id items , NSIndexPath *indexPath){
         CTLeftTableViewCell *leftCell = (CTLeftTableViewCell *)cell;
@@ -110,16 +114,22 @@
 
 - (void)createRightTableView:(NSArray *)rightDataSource{
     
-    _rightTableview = [[UITableView alloc] initWithFrame:_rightBackgroundView.bounds style:UITableViewStylePlain];
-    [_rightTableview registerNib:[CTLeftTableViewCell nib] forCellReuseIdentifier:@"RIGHT_UITABLEVIEW"];
+    _mainScrollview = [[UIScrollView alloc] initWithFrame:_rightBackgroundView.bounds];
+    _mainScrollview.contentSize = CGSizeMake(CT_RIGHTCELLVIEW_WIDTH*20, 0);
+    [_rightBackgroundView addSubview:_mainScrollview];
+    
+    _rightTableview = [[UITableView alloc] initWithFrame:(CGRect){0,0,CT_RIGHTCELLVIEW_WIDTH*20,_rightBackgroundView.bounds.size.height} style:UITableViewStylePlain];
+    [_rightTableview registerNib:[CTRightTableViewCell nib] forCellReuseIdentifier:@"RIGHT_UITABLEVIEW"];
+    _rightTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     _rightTableview.delegate = self;
-    _rightTableview.rowHeight = 45;
-    [_rightBackgroundView addSubview:_rightTableview];
+    _rightTableview.rowHeight = CT_CELL_ROW_HEIGHT;
+    [_mainScrollview addSubview:_rightTableview];
     
     
+
     CTUITableViewCellConfigureBlock configureCell = ^(UITableViewCell *cell, id items , NSIndexPath *indexPath){
-        CTLeftTableViewCell *leftCell = (CTLeftTableViewCell *)cell;
-        [leftCell configCellData];
+        CTRightTableViewCell *rightCell = (CTRightTableViewCell *)cell;
+        [rightCell configCellData:@[@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@""] withCell:rightCell];
     };
     
     _rightDataSource = [[CTUITableviewDataSource alloc] initWithItems:rightDataSource cellIdentifier:@"RIGHT_UITABLEVIEW" configureCellBlock:configureCell];
