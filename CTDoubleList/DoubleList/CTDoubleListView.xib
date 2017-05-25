@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T63-Wo-eUE">
-                    <rect key="frame" x="67" y="0.0" width="308" height="49"/>
+                    <rect key="frame" x="68" y="0.0" width="307" height="49"/>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.029356710899999999" blue="0.1099388397" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="49" id="Ume-JC-f6p"/>
@@ -49,7 +49,7 @@
                 <constraint firstAttribute="trailing" secondItem="TX8-cq-lQT" secondAttribute="trailing" id="Yar-bP-KeI"/>
                 <constraint firstItem="0ED-dh-FdA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="49" id="YzC-1B-2Wd"/>
                 <constraint firstAttribute="trailing" secondItem="T63-Wo-eUE" secondAttribute="trailing" id="Z4a-p8-zJz"/>
-                <constraint firstItem="T63-Wo-eUE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="67" id="cu1-SN-h4P"/>
+                <constraint firstItem="T63-Wo-eUE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="68" id="cu1-SN-h4P"/>
                 <constraint firstItem="TX8-cq-lQT" firstAttribute="leading" secondItem="0ED-dh-FdA" secondAttribute="trailing" id="czG-Aa-OpC"/>
                 <constraint firstItem="T63-Wo-eUE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tWD-ko-BG7"/>
             </constraints>

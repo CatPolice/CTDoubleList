@@ -24,8 +24,8 @@
 
     // Configure the view for the selected state
 }
-- (void)configCellData{
-    self.cellTitle.text = @"11111";
+- (void)configCellData:(NSString *)title{
+    self.cellTitle.text = title;
 }
 
 

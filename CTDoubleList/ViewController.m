@@ -21,15 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
 }
-
-
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self.ctDoubleList setDataSource:nil withHeadDataSource:nil withRightDataSource:nil];
+    // layout 结束之后设置数据源
+    [self.ctDoubleList setDataSource:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]
+                  withHeadDataSource:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]
+                 withRightDataSource:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

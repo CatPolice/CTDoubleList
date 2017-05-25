@@ -19,6 +19,7 @@
 		B84996641ED5214B00838152 /* CTRightCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B84996631ED5214B00838152 /* CTRightCellView.m */; };
 		B84996681ED5240A00838152 /* CTRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B84996661ED5240A00838152 /* CTRightTableViewCell.m */; };
 		B84996691ED5240A00838152 /* CTRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84996671ED5240A00838152 /* CTRightTableViewCell.xib */; };
+		B85765091ED6838900661533 /* CTHeadCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B85765081ED6838900661533 /* CTHeadCellView.m */; };
 		B8C345F21ED4150D008AD7D2 /* CTLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C345F01ED4150D008AD7D2 /* CTLeftTableViewCell.m */; };
 		B8C345F31ED4150D008AD7D2 /* CTLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C345F11ED4150D008AD7D2 /* CTLeftTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,8 @@
 		B84996661ED5240A00838152 /* CTRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRightTableViewCell.m; sourceTree = "<group>"; };
 		B84996671ED5240A00838152 /* CTRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTRightTableViewCell.xib; sourceTree = "<group>"; };
 		B849966A1ED530C800838152 /* CTDoubleListConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDoubleListConstant.h; sourceTree = "<group>"; };
+		B85765071ED6838900661533 /* CTHeadCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHeadCellView.h; sourceTree = "<group>"; };
+		B85765081ED6838900661533 /* CTHeadCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHeadCellView.m; sourceTree = "<group>"; };
 		B8C345EF1ED4150D008AD7D2 /* CTLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLeftTableViewCell.h; sourceTree = "<group>"; };
 		B8C345F01ED4150D008AD7D2 /* CTLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLeftTableViewCell.m; sourceTree = "<group>"; };
 		B8C345F11ED4150D008AD7D2 /* CTLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTLeftTableViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				B84046B01ED3FDE200D4D56E /* CTUITableviewDataSource.m */,
 				B84996621ED5214B00838152 /* CTRightCellView.h */,
 				B84996631ED5214B00838152 /* CTRightCellView.m */,
+				B85765071ED6838900661533 /* CTHeadCellView.h */,
+				B85765081ED6838900661533 /* CTHeadCellView.m */,
 			);
 			path = DoubleList;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				B84996641ED5214B00838152 /* CTRightCellView.m in Sources */,
 				B8C345F21ED4150D008AD7D2 /* CTLeftTableViewCell.m in Sources */,
 				B84046971ED3D2D100D4D56E /* AppDelegate.m in Sources */,
+				B85765091ED6838900661533 /* CTHeadCellView.m in Sources */,
 				B84046AC1ED3D38400D4D56E /* CTDoubleListView.m in Sources */,
 				B84046941ED3D2D100D4D56E /* main.m in Sources */,
 				B84046B11ED3FDE200D4D56E /* CTUITableviewDataSource.m in Sources */,

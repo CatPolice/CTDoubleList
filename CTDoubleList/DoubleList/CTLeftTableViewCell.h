@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 
-- (void)configCellData;
+- (void)configCellData:(NSString *)title;
 
 
 @end

@@ -34,7 +34,7 @@
     
     for (int i = 0; i < data.count; i++) {
         CTRightCellView *cellView = [[CTRightCellView alloc] initWithFrame:(CGRect){0+(CT_RIGHTCELLVIEW_WIDTH)*i,0,CT_RIGHTCELLVIEW_WIDTH,CT_RIGHTCELLVIEW_HEIGHT}];
-        cellView.lable.text = @"123";
+        cellView.lable.text = [data objectAtIndex:i];
         [self.contentView addSubview:cellView];
     }
     self.customReuseIdentifier = YES;
